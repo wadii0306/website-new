@@ -1,0 +1,50 @@
+[
+  {
+    "id": "dashboard",
+    "title": "Dashboard",
+    "description": "Get a comprehensive overview of all bookings and leads at a glance with real-time insights and analytics.",
+    "image": "features/dashboard.png"
+  },
+  {
+    "id": "account-team",
+    "title": "Account & Team Management",
+    "description": "Create and manage team members while setting up fixed or recurring holidays as blackout days.",
+    "image": "features/account_team_blackout.png"
+  },
+  {
+    "id": "blackout-days",
+    "title": "Blackout Days",
+    "description": "Easily configure unavailable dates by setting up blackout days for your business calendar.",
+    "image": "features/blackout_days.png"
+  },
+  {
+    "id": "leads",
+    "title": "Leads Management",
+    "description": "View, manage, and edit all created leads in one centralized table with complete control.",
+    "image": "features/leads_table.png"
+  },
+  {
+    "id": "bookings",
+    "title": "Bookings",
+    "description": "Convert confirmed leads into bookings and manage all your confirmed reservations efficiently.",
+    "image": "features/booking_table.png"
+  },
+  {
+    "id": "calendar",
+    "title": "Calendar View",
+    "description": "Visualize all leads and bookings in a date-wise calendar format for better planning and organization.",
+    "image": "features/calendar.png"
+  },
+  {
+    "id": "purchase-orders",
+    "title": "Purchase Orders",
+    "description": "Add vendors for services, manage purchase orders, and track outstanding payment amounts seamlessly.",
+    "image": "features/po.png"
+  },
+  {
+    "id": "reports",
+    "title": "Reports & Analytics",
+    "description": "Access in-depth analysis of debtors and creditors with comprehensive financial reporting tools.",
+    "image": "features/reports.png"
+  }
+]
