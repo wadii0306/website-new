@@ -1,8 +1,9 @@
 import React from 'react'
+import FeaturesCard from './FeaturesCard'
 
 export const FeaturesHeader = () => {
     return (
-        <div className="text-center max-w-4xl mx-auto px-6 py-16">
+        <div className="text-center max-w-4xl mx-auto px-6 py-8">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Complete Banquet Management Solution
             </h2>
@@ -25,6 +26,7 @@ export const FeaturesHeader = () => {
                     <span className="text-sm font-medium text-gray-700">Client Management</span>
                 </div>
             </div>
+            <FeaturesCard />
         </div>
     )
 }

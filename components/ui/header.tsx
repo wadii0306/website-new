@@ -7,9 +7,10 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 
 const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'About', href: '#link' },
+    { name: 'Home', href: '/' },
+    { name: 'Features', href: '#features-section' },
+    { name: 'Pricing', href: '#pricing-section' },
+    { name: 'About', href: '#about-section' },
 ]
 
 export const HeroHeader = () => {
@@ -20,8 +21,30 @@ export const HeroHeader = () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50)
         }
+        
+        const handleSmoothScroll = (e: MouseEvent) => {
+            const target = e.target as HTMLAnchorElement
+            if (target.hash) {
+                e.preventDefault()
+                const element = document.querySelector(target.hash)
+                if (element) {
+                    element.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })
+                }
+            }
+        }
+
         window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
+        
+        // Add smooth scroll to all anchor links
+        document.addEventListener('click', handleSmoothScroll)
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+            document.removeEventListener('click', handleSmoothScroll)
+        }
     }, [])
     return (
         <header>
