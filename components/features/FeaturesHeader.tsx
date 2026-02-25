@@ -3,7 +3,7 @@ import FeaturesCard from './FeaturesCard'
 
 export const FeaturesHeader = () => {
     return (
-        <div className="text-center max-w-4xl mx-auto px-6 py-8">
+        <div className="text-center w-full px-6 py-8">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Complete Banquet Management Solution
             </h2>

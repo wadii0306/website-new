@@ -2,6 +2,7 @@ import { FeaturesHeader } from "@/components/features/FeaturesHeader";
 import { PricingSection } from "@/components/pricing/PricingSection";
 import { AboutSection } from "@/components/about/AboutSection";
 import HeroSection from "@/components/ui/hero-section-one";
+import ContactPage from "@/components/contact/ContactPage";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     </div>
     <PricingSection />
     <AboutSection />
+    <ContactPage/>
    </div>
   );
 }

@@ -102,7 +102,7 @@ export const PricingSection = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#0f1724] mb-4 leading-tight tracking-tight">
             Simple, Transparent<br />
-            <span style={{ color: '#F28B8A' }}>Pricing</span>
+            <span style={{ color: '#F52D2A' }}>Pricing</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
             Choose the perfect plan for your banquet hall. No hidden fees, no surprises — just results.
@@ -125,7 +125,7 @@ export const PricingSection = () => {
               Yearly
               <span
                 className="ml-2 text-xs font-bold px-2 py-0.5 rounded-full"
-                style={{ background: 'rgba(242,139,138,0.15)', color: '#F28B8A' }}
+                style={{ background: 'rgba(242,139,138,0.15)', color: '#F52D2A' }}
               >
                 Save 20%
               </span>
@@ -135,7 +135,7 @@ export const PricingSection = () => {
 
         {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6 items-center">
-          {plans.map((plan, i) => (
+          {plans.map((plan) => (
             <div
               key={plan.name}
               className="relative rounded-2xl transition-transform duration-300 hover:-translate-y-1"
@@ -159,7 +159,7 @@ export const PricingSection = () => {
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                   <span
                     className="text-xs font-bold tracking-widest uppercase px-4 py-1 rounded-full"
-                    style={{ background: '#F28B8A', color: '#fff' }}
+                    style={{ background: '#F52D2A', color: '#fff' }}
                   >
                     {plan.badge}
                   </span>
@@ -168,7 +168,7 @@ export const PricingSection = () => {
 
               <div className="p-8">
                 {/* Plan name */}
-                <p className="text-xs font-bold tracking-[0.15em] uppercase mb-1" style={{ color: '#F28B8A' }}>
+                <p className="text-xs font-bold tracking-[0.15em] uppercase mb-1" style={{ color: 'white' }}>
                   {plan.name}
                 </p>
                 <p className="text-gray-400 text-sm mb-6">{plan.tagline}</p>
@@ -200,7 +200,7 @@ export const PricingSection = () => {
                   style={
                     plan.featured
                       ? {
-                          background: '#F28B8A',
+                          background: '#F52D2A',
                           color: '#fff',
                           boxShadow: '0 4px 20px rgba(242,139,138,0.35)',
                         }

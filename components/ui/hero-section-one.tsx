@@ -130,7 +130,7 @@ export default function HeroSection() {
                             <div className="before:bg-foreground/5 before:shadow-2xl relative h-full before:absolute before:-inset-y-4 before:-left-8 before:top-0 before:w-20 before:skew-x-6 before:rounded-[calc(var(--radius)+1rem)] before:blur-xl">
                                 <div className="bg-background rounded-(--radius) shadow-foreground/10 ring-foreground/5 relative h-full -translate-y-12 skew-x-6 overflow-hidden shadow-2xl">
                                     <Image
-                                        src="/hero/dashboard.png"
+                                        src="/hero/dashboard_trial.png"
                                         alt="hero dashboard"
                                         width="2880"
                                         height="1842"
