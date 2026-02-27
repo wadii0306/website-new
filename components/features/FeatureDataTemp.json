@@ -1,50 +1,38 @@
 [
   {
-    "id": "dashboard",
-    "title": "Dashboard",
-    "description": "Get a comprehensive overview of all bookings and leads at a glance with real-time insights and analytics.",
-    "image": "/hero/dashboard_trial.png"
-  },
-  {
-    "id": "account-team",
-    "title": "Account & Team Management",
-    "description": "Create and manage team members while setting up fixed or recurring holidays as blackout days.",
-    "image": "/hero/dashboard_trial.png"
-  },
-  {
-    "id": "blackout-days",
-    "title": "Blackout Days",
-    "description": "Easily configure unavailable dates by setting up blackout days for your business calendar.",
-    "image": "/hero/dashboard_trial.png"
-  },
-  {
-    "id": "leads",
-    "title": "Leads Management",
-    "description": "View, manage, and edit all created leads in one centralized table with complete control.",
-    "image": "/hero/dashboard_trial.png"
-  },
-  {
-    "id": "bookings",
-    "title": "Bookings",
-    "description": "Convert confirmed leads into bookings and manage all your confirmed reservations efficiently.",
-    "image": "/hero/dashboard_trial.png"
+    "id": "food-package",
+    "title": "Food Package",
+    "description": "Design custom food packages with ease — organize starters, main course, live kitchen, and desserts, and assign tailored menus to each category for a seamless event dining experience.",
+    "image": "/feature/add_food.png"
   },
   {
     "id": "calendar",
-    "title": "Calendar View",
-    "description": "Visualize all leads and bookings in a date-wise calendar format for better planning and organization.",
-    "image": "/hero/dashboard_trial.png"
+    "title": "In-App Calendar",
+    "description": "Get a clear date-wise overview of all bookings and leads. Quickly navigate through events, identify available slots, and create new leads or bookings directly from the calendar view.",
+    "image": "/feature/calendar.png"
   },
   {
-    "id": "purchase-orders",
-    "title": "Purchase Orders",
-    "description": "Add vendors for services, manage purchase orders, and track outstanding payment amounts seamlessly.",
-    "image": "/hero/dashboard_trial.png"
+    "id": "debtors",
+    "title": "List Of Debtors",
+    "description": "Track all client financials in one place — view contact details, event dates, total costs, advance received, and outstanding balance for every account at a glance.",
+    "image": "/feature/debtors.png"
+  },
+  {
+    "id": "booking-list",
+    "title": "Booking List",
+    "description": "Manage all bookings with priority-based status tracking and event date visibility. Edit details, update payment records, and download comprehensive booking reports in PDF.",
+    "image": "/feature/lead_col.png"
+  },
+  {
+    "id": "lead-status",
+    "title": "Lead Trail",
+    "description": "Stay on top of every lead by logging communication updates and assigning status tags during and after the lead creation process, ensuring no follow-up falls through the cracks.",
+    "image": "/feature/lead_status.png"
   },
   {
     "id": "reports",
     "title": "Reports & Analytics",
-    "description": "Access in-depth analysis of debtors and creditors with comprehensive financial reporting tools.",
-    "image": "/hero/dashboard_trial.png"
+    "description": "Get a complete financial snapshot — monitor total payments received, pending dues, debtors, and creditors. Apply filters by date range and category for detailed, actionable insights.",
+    "image": "/feature/overall_reports.png"
   }
 ]

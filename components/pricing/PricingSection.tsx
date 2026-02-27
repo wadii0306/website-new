@@ -114,7 +114,7 @@ export const PricingSection = () => {
             <button
               onClick={() => setIsYearly(!isYearly)}
               className="relative w-14 h-7 rounded-full transition-colors duration-300 focus:outline-none"
-              style={{ background: isYearly ? '#F28B8A' : '#2a3547' }}
+              style={{ background: '#2a3547' }}
             >
               <span
                 className="absolute top-1 left-1 w-5 h-5 bg-white rounded-full shadow transition-transform duration-300"
@@ -182,7 +182,7 @@ export const PricingSection = () => {
                 </div>
 
                 {/* Divider */}
-                <div className="w-full h-px mb-8" style={{ background: 'rgba(255,255,255,0.06)' }} />
+                <div className="w-full h-px mb-8" style={{ background: 'white' }} />
 
                 {/* Features */}
                 <ul className="space-y-3.5 mb-10">
@@ -206,22 +206,22 @@ export const PricingSection = () => {
                         }
                       : {
                           background: 'transparent',
-                          color: '#F28B8A',
-                          border: '1.5px solid rgba(242,139,138,0.4)',
+                          color: 'white',
+                          border: '1.5px solid #F52D2A',
                         }
                   }
                   onMouseEnter={(e) => {
                     if (!plan.featured) {
-                      e.currentTarget.style.background = 'rgba(242,139,138,0.1)';
+                      e.currentTarget.style.background = '#F52D2A';
                     } else {
-                      e.currentTarget.style.background = '#e87877';
+                      e.currentTarget.style.background = '#F52D2A';
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (!plan.featured) {
                       e.currentTarget.style.background = 'transparent';
                     } else {
-                      e.currentTarget.style.background = '#F28B8A';
+                      e.currentTarget.style.background = '#F52D2A';
                     }
                   }}
                 >
