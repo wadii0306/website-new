@@ -96,6 +96,7 @@ export const HeroHeader = () => {
                                         <li key={index}>
                                             <Link
                                                 href={item.href}
+                                                onClick={() => setMenuState(false)}
                                                 className="text-white hover:text-white/80 block duration-150">
                                                 <span>{item.name}</span>
                                             </Link>
@@ -108,7 +109,7 @@ export const HeroHeader = () => {
                                     asChild
                                     size="sm"
                                     className="bg-[#E62E2D] hover:bg-[#c92827] text-white">
-                                    <Link href="#contact-section">
+                                    <Link href="#contact-section" onClick={() => setMenuState(false)}>
                                         <span>Get Started</span>
                                     </Link>
                                 </Button>

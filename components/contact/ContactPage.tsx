@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { toast } from 'sonner';
+import { contactApi } from '../../services/contact.service';
 
 const RED  = "#E62E2D";
 const DARK = "#111A2D";
@@ -36,8 +38,8 @@ export default function ContactPage() {
     fullName: "", banquetName: "", email: "", phone: "", city: "", venueType: "", message: "",
   });
   const [errors, setErrors] = useState<ErrorState>({});
-  const [submitted, setSubmitted] = useState(false);
   const [focused, setFocused] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const id = "wadii-contact-styles";
@@ -100,9 +102,57 @@ export default function ContactPage() {
     if (errors[name as keyof ErrorState]) setErrors((p) => ({ ...p, [name]: undefined }));
   };
 
-  const handleSubmit = (e: React.MouseEvent) => {
+  const handleSubmit = async (e: React.MouseEvent) => {
     e.preventDefault();
-    if (validate()) setSubmitted(true);
+    
+    if (!validate()) return;
+    
+    setIsLoading(true);
+    
+    try {
+      const response = await contactApi.createContact({
+        fullName: form.fullName.trim(),
+        banquetName: form.banquetName.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        city: form.city.trim(),
+        venueType: form.venueType.trim() || undefined,
+        message: form.message.trim() || undefined,
+      });
+      
+      if (response.success) {
+        // Show success toast
+        toast.success('Message submitted successfully! We will get back to you within 24 hours.', {
+          duration: 5000,
+          position: 'top-right',
+        });
+        
+        // Reset form
+        setForm({
+          fullName: "",
+          banquetName: "",
+          email: "",
+          phone: "",
+          city: "",
+          venueType: "",
+          message: ""
+        });
+        setErrors({});
+      } else {
+        toast.error(response.message || 'Failed to submit contact form', {
+          duration: 4000,
+          position: 'top-right',
+        });
+      }
+    } catch (error: unknown) {
+      console.error('Contact form submission error:', error);
+      toast.error('Network error. Please try again later.', {
+        duration: 4000,
+        position: 'top-right',
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const pillStyle: React.CSSProperties = {
@@ -129,32 +179,6 @@ export default function ContactPage() {
   const errStyle: React.CSSProperties = {
     fontSize: 11, color: RED, marginTop: 5, display: "flex", alignItems: "center", gap: 5,
   };
-
-  if (submitted) {
-    return (
-      <section style={{ minHeight: "80vh", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ textAlign: "center", padding: "40px 24px", maxWidth: 420 }}>
-          <div style={{ width: 72, height: 72, borderRadius: "50%", background: "rgba(230,46,45,0.08)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 24px" }}>
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <circle cx="18" cy="18" r="17" stroke={RED} strokeWidth="1.5" />
-              <path className="wc-check-path" d="M11 18l5 5 9-9" stroke={RED} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-          <h2 style={{ fontSize: 28, fontWeight: 800, color: DARK, marginBottom: 12 }}>Message Sent!</h2>
-          <p style={{ fontSize: 15, color: "#6B7A99", lineHeight: 1.7, marginBottom: 28 }}>
-            Thanks, <strong style={{ color: DARK }}>{form.fullName}</strong> from{" "}
-            <strong style={{ color: DARK }}>{form.banquetName}</strong>! We&apos;ll reach out within 24 hours.
-          </p>
-          <button
-            onClick={() => { setSubmitted(false); setForm({ fullName: "", banquetName: "", email: "", phone: "", city: "", venueType: "", message: "" }); }}
-            style={{ padding: "12px 28px", borderRadius: 100, background: DARK, color: "#fff", fontSize: 14, fontWeight: 600, border: "none", cursor: "pointer" }}
-          >
-            Send Another Message
-          </button>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section ref={sectionRef} id="contact-section" style={{ background: "#fff", color: DARK, overflow: "hidden" }}>
@@ -312,18 +336,34 @@ export default function ContactPage() {
               <button
                 className="wc-btn"
                 onClick={handleSubmit}
+                disabled={isLoading}
                 style={{
                   display: "inline-flex", alignItems: "center", gap: 10,
                   padding: "14px 36px", borderRadius: 100,
-                  background: RED, color: "#fff",
+                  background: isLoading ? "#9AA4B8" : RED, 
+                  color: "#fff",
                   fontSize: 14, fontWeight: 700, letterSpacing: "0.02em",
-                  border: "none", cursor: "pointer", flexShrink: 0,
+                  border: "none", cursor: isLoading ? "not-allowed" : "pointer", 
+                  flexShrink: 0,
+                  opacity: isLoading ? 0.7 : 1,
+                  transition: "opacity 0.25s, background 0.25s",
                 }}
               >
-                Send Message
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                {isLoading ? (
+                  <>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ animation: "spin 1s linear infinite" }}>
+                      <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="2" strokeDasharray="12.57" strokeDashoffset="3.14" fill="none" />
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </>
+                )}
               </button>
             </div>
 
