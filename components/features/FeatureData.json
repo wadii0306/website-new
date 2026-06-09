@@ -1,50 +1,83 @@
 [
   {
     "id": "dashboard",
-    "title": "Dashboard",
-    "description": "Get a comprehensive overview of all bookings and leads at a glance with real-time insights and analytics.",
-    "image": "/features/dashboard.png"
+    "title": "Banquet Management Dashboard",
+    "description": "Get a real-time overview of bookings, leads, revenue, and venue performance — your command center for banquet hall operations.",
+    "image": "/features/dashboard.png",
+    "alt": "Banquet management software dashboard with bookings, leads, and revenue analytics",
+    "width": 1902,
+    "height": 866
   },
   {
     "id": "account-team",
-    "title": "Account & Team Management",
-    "description": "Create and manage team members while setting up fixed or recurring holidays as blackout days.",
-    "image": "/features/account_team_blackout.png"
+    "title": "Team & Access Management",
+    "description": "Create team members with role-based permissions so every staff member sees only what they need in your banquet management system.",
+    "image": "/features/account_team_blackout.png",
+    "alt": "Banquet management software team and role-based access management dashboard",
+    "width": 1900,
+    "height": 855
   },
   {
     "id": "blackout-days",
-    "title": "Blackout Days",
-    "description": "Easily configure unavailable dates by setting up blackout days for your business calendar.",
-    "image": "/features/blackout_days.png"
+    "title": "Muhurat & Premium Date Management",
+    "description": "Mark auspicious wedding dates (muhurat) on your calendar — plan capacity, pricing, and bookings around India's most sought-after celebration days.",
+    "image": "/features/blackout_days.png",
+    "alt": "Banquet management software muhurat and premium wedding date calendar",
+    "width": 1894,
+    "height": 858
   },
   {
     "id": "leads",
-    "title": "Leads Management",
-    "description": "View, manage, and edit all created leads in one centralized table with complete control.",
-    "image": "/features/leads_table.png"
+    "title": "Banquet CRM & Lead Management",
+    "description": "Capture inquiries, track follow-ups, log customer interactions, and manage your sales pipeline with an integrated banquet CRM system.",
+    "image": "/features/leads_management.png",
+    "alt": "Banquet CRM software lead management and customer follow-up dashboard",
+    "width": 1024,
+    "height": 468
   },
   {
     "id": "bookings",
-    "title": "Bookings",
-    "description": "Convert confirmed leads into bookings and manage all your confirmed reservations efficiently.",
-    "image": "/features/booking_table.png"
+    "title": "Banquet Booking Management",
+    "description": "Manage event bookings from inquiry to confirmation. Track booking status, event details, payment history, and generate downloadable reports with ease.",
+    "image": "/features/booking_table.png",
+    "alt": "Banquet booking management dashboard showing event bookings and status tracking",
+    "width": 1919,
+    "height": 880
   },
   {
     "id": "calendar",
-    "title": "Calendar View",
-    "description": "Visualize all leads and bookings in a date-wise calendar format for better planning and organization.",
-    "image": "/features/calendar.png"
+    "title": "Banquet Booking Calendar",
+    "description": "View all bookings, leads, and event schedules in a centralized calendar. Easily identify available dates, avoid double bookings, and manage venue availability.",
+    "image": "/features/calendar.png",
+    "alt": "Banquet booking calendar showing event schedules and venue availability",
+    "width": 1889,
+    "height": 855
   },
   {
     "id": "purchase-orders",
-    "title": "Purchase Orders",
-    "description": "Add vendors for services, manage purchase orders, and track outstanding payment amounts seamlessly.",
-    "image": "/features/po.png"
+    "title": "Banquet Vendor Management",
+    "description": "Manage catering and additional service vendors — track vendor ledgers, PO credits, payment debits, and balance payable from one dashboard.",
+    "image": "/features/vendor_management.png?v=2",
+    "alt": "Banquet vendor management dashboard with ledger and payment tracking",
+    "width": 1024,
+    "height": 487
   },
   {
     "id": "reports",
-    "title": "Reports & Analytics",
-    "description": "Access in-depth analysis of debtors and creditors with comprehensive financial reporting tools.",
-    "image": "/features/reports.png"
+    "title": "Banquet Reports & Business Analytics",
+    "description": "Monitor venue performance, booking trends, revenue, pending dues, and customer activity through powerful reporting and analytics tools.",
+    "image": "/features/reports.png",
+    "alt": "Banquet management software reports and analytics dashboard",
+    "width": 1897,
+    "height": 873
+  },
+  {
+    "id": "expense-management",
+    "title": "Banquet Expense Management",
+    "description": "Track venue costs, approvals, and cashflow — from event-day spends to monthly overheads with full visibility in your banquet management software.",
+    "image": "/features/expense_management.png",
+    "alt": "Banquet expense management dashboard for venue cost tracking",
+    "width": 1024,
+    "height": 452
   }
 ]

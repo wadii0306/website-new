@@ -1,150 +1,167 @@
 "use client"
 
 import React from 'react'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { HeroHeader } from './header'
-import { ChevronRight } from 'lucide-react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { ArrowRight, Play, Star, TrendingUp, Users, Calendar } from 'lucide-react'
+import { HeroHeader } from './header'
+
+const STATS = [
+  { value: '500+', label: 'Venues', icon: <Users className="w-4 h-4" /> },
+  { value: '50K+', label: 'Events Booked', icon: <Calendar className="w-4 h-4" /> },
+  { value: '99.9%', label: 'Uptime', icon: <TrendingUp className="w-4 h-4" /> },
+  { value: '4.8★', label: 'Avg Rating', icon: <Star className="w-4 h-4" /> },
+]
+
+const REVIEWS = [
+  { name: 'Priya S.', text: 'Bookings doubled in 3 months', avatar: 'P' },
+  { name: 'Rajan M.', text: 'Saves 10 hrs/week', avatar: 'R' },
+]
 
 export default function HeroSection() {
-    return (
-        <>
-            <HeroHeader />
-            <main className="overflow-hidden">
-                <section className="bg-linear-to-b to-muted from-background">
-                    <div className="relative py-24 md:py-36">
-                        <div className="relative z-10 mx-auto w-full max-w-5xl px-6">
-                            {/* Text content: full-width on mobile, half-width on md+ */}
-                            <div className="text-center md:text-left md:w-1/2">
-                                <div>
-                                    <h1 className="max-w-md mx-auto md:mx-0 text-balance text-5xl font-medium md:text-6xl">
-                                        Smart Banquet Management, Simplified.
-                                    </h1>
-                                    <p className="text-muted-foreground my-8 max-w-2xl text-balance text-xl mx-auto md:mx-0">
-                                        Wadii streamlines event operations from inquiries and bookings to billing, communications, and analytics so your team can focus on delivering exceptional experiences.
-                                    </p>
+  const handleScroll = (href: string) => {
+    const el = document.querySelector(href)
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
-                                    <div className="flex items-center justify-center md:justify-start gap-3">
-                                        <motion.div
-                                            whileHover={{ scale: 1.05 }}
-                                            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                                        >
-                                            <Button
-                                                asChild
-                                                size="lg"
-                                                className="pr-4.5 relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group bg-[#111A2D] hover:bg-[#0f1520] text-white">
-                                                <Link href="#link" className="relative z-10 flex items-center gap-2">
-                                                    <motion.div
-                                                        className="absolute inset-0"
-                                                        animate={{
-                                                            backgroundPosition: ['0% 0%', '100% 0%', '0% 0%']
-                                                        }}
-                                                        transition={{
-                                                            duration: 3,
-                                                            repeat: Infinity,
-                                                            ease: "linear"
-                                                        }}
-                                                        style={{
-                                                            background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)',
-                                                            backgroundSize: '200% 100%'
-                                                        }}
-                                                    />
-                                                    <span className="text-nowrap">Explore Features</span>
-                                                    <ChevronRight className="opacity-50" />
-                                                </Link>
-                                            </Button>
-                                        </motion.div>
-                                        <motion.div
-                                            whileHover={{ scale: 1.05 }}
-                                            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                                        >
-                                            <Button
-                                                asChild
-                                                size="lg"
-                                                variant="outline"
-                                                className="pl-5 relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group bg-[#111A2D] hover:bg-[#0f1520] text-white border-[#111A2D] hover:border-[#0f1520]">
-                                                <Link href="#link" className="relative z-10 flex items-center gap-2">
-                                                    <motion.div
-                                                        className="absolute inset-0"
-                                                        animate={{
-                                                            backgroundPosition: ['0% 0%', '100% 0%', '0% 0%']
-                                                        }}
-                                                        transition={{
-                                                            duration: 3,
-                                                            repeat: Infinity,
-                                                            ease: "linear"
-                                                        }}
-                                                        style={{
-                                                            background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)',
-                                                            backgroundSize: '200% 100%'
-                                                        }}
-                                                    />
-                                                    <span className="text-nowrap">Get started today</span>
-                                                </Link>
-                                            </Button>
-                                        </motion.div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+  return (
+    <>
+      <HeroHeader />
+      <section
+        data-nav-theme="dark"
+        className="section-surface-dark relative min-h-screen flex flex-col overflow-hidden"
+        aria-label="Wadii banquet management software hero"
+      >
+        {/* Background radial glows */}
+        <div className="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+          <div className="absolute top-[-10%] left-[10%] w-[600px] h-[600px] rounded-full opacity-20"
+            style={{ background: 'radial-gradient(circle, #E62E2D 0%, transparent 65%)' }} />
+          <div className="absolute bottom-[-15%] right-[5%] w-[500px] h-[500px] rounded-full opacity-10"
+            style={{ background: 'radial-gradient(circle, #4f8ef7 0%, transparent 65%)' }} />
+          {/* Grid overlay */}
+          <div className="absolute inset-0 opacity-[0.04]"
+            style={{
+              backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
+              backgroundSize: '64px 64px',
+            }} />
+        </div>
 
-                        {/*
-                         * MOBILE:  centered below the text, no skew/translate, full width with padding
-                         * DESKTOP: absolute positioned right side, with the original skew/perspective effect
-                         */}
-                        <div className="
-                            mt-12 px-6
-                            flex justify-center
-                            md:perspective-near
-                            md:absolute md:-right-6 md:bottom-16 md:left-1/2 md:top-25
-                            md:translate-x-0 md:px-0 md:block
-                        ">
-                            <div className="
-                                w-full max-w-sm
-                                md:max-w-none md:w-auto
-                                md:before:bg-foreground/5 md:before:shadow-2xl
-                                md:relative md:h-full
-                                md:before:absolute md:before:-inset-y-4 md:before:-left-8 md:before:top-0
-                                md:before:w-20 md:before:skew-x-6 md:before:rounded-[calc(var(--radius)+1rem)] md:before:blur-xl
-                            ">
-                                {/* Card wrapper: no skew on mobile, skewed on desktop */}
-                                <div className="
-                                    bg-background rounded-(--radius) shadow-foreground/10 ring-foreground/5
-                                    relative overflow-hidden shadow-2xl
-                                    md:-translate-y-12 md:skew-x-6
-                                ">
-                                    <Image
-                                        src="/hero/dashboard_trial.png"
-                                        alt="hero dashboard"
-                                        width="2880"
-                                        height="1842"
-                                        className="object-top-left w-full h-auto object-cover"
-                                    />
-                                    <motion.div
-                                        className="absolute inset-0 z-10 pointer-events-none"
-                                        animate={{
-                                            x: ['-100%', '200%'],
-                                        }}
-                                        transition={{
-                                            duration: 4,
-                                            repeat: Infinity,
-                                            ease: "linear",
-                                            repeatDelay: 0
-                                        }}
-                                        style={{
-                                            background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.4) 60%, transparent 100%)',
-                                            width: '100%',
-                                            height: '100%'
-                                        }}
-                                    />
-                                </div>
-                            </div>
-                        </div>
+        <div className="relative z-10 flex-1 flex flex-col justify-center pt-24 pb-16">
+          <div className="max-w-6xl mx-auto px-6 w-full">
+            <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-10 lg:gap-8 xl:gap-10 items-center">
+
+              {/* Left: copy */}
+              <div className="mx-auto lg:mx-0 max-w-xl">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/5 text-white/60 text-xs font-semibold tracking-wide uppercase mb-6 animate-fade-up">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#E62E2D]" />
+                  Banquet management software
+                </div>
+
+                {/* H1 — keyword-rich for SEO */}
+                <h1
+                  className="max-w-[18ch] sm:max-w-none text-[36px] sm:text-[44px] lg:text-[2.75rem] leading-[1.12] tracking-tight mb-5 animate-fade-up animate-delay-100"
+                  style={{ fontFamily: "'Space Grotesk', 'Poppins', sans-serif", color: '#FFFFFF', fontWeight: 700 }}
+                >
+                  Banquet Management Software for{' '}
+                  <span className="gradient-text">Banquet Halls, Hotels & Event Venues</span>
+                </h1>
+
+                <p className="text-white/55 text-base sm:text-lg leading-relaxed mb-8 max-w-lg animate-fade-up animate-delay-200">
+                  Wadii is a complete banquet management system for inquiries, bookings, billing, and analytics — trusted by venue owners who want more bookings and less admin.
+                </p>
+
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row gap-3 mb-8 animate-fade-up animate-delay-300">
+                  <a
+                    href="#contact"
+                    onClick={(e) => { e.preventDefault(); handleScroll('#contact') }}
+                    className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-[#E62E2D] hover:bg-[#c92827] text-white text-base font-semibold rounded-xl shadow-lg shadow-red-900/40 hover:shadow-red-900/60 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+                  >
+                    Book a Demo
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="#features"
+                    onClick={(e) => { e.preventDefault(); handleScroll('#features') }}
+                    className="inline-flex items-center justify-center gap-2 px-7 py-4 border border-white/20 text-white text-base font-semibold rounded-xl hover:bg-white/10 hover:border-white/30 transition-all duration-200"
+                  >
+                    <Play className="w-4 h-4 fill-white" />
+                    See How It Works
+                  </a>
+                </div>
+
+                {/* Social proof */}
+                <div className="flex items-center gap-3 animate-fade-up animate-delay-400">
+                  <div className="flex -space-x-2">
+                    {REVIEWS.map((r, i) => (
+                      <div
+                        key={r.name}
+                        className={[
+                          "flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#111A2D] text-xs font-bold text-white",
+                          i === 0 ? "bg-[#E62E2D]" : "bg-[#1a2742]",
+                        ].join(" ")}
+                        title={`${r.name} — ${r.text}`}
+                      >
+                        {r.avatar}
+                      </div>
+                    ))}
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#111A2D] bg-white/15 text-xs font-bold text-white">
+                      +
                     </div>
-                </section>
-            </main>
-        </>
-    )
+                  </div>
+                  <div>
+                    <div className="mb-0.5 flex gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-xs text-white/50">Loved by 500+ venue managers</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: product dashboard */}
+              <div className="hero-dashboard-wrap relative w-full max-w-[640px] mx-auto lg:max-w-none lg:ml-auto lg:mr-0 mt-8 lg:mt-0 animate-fade-up animate-delay-200">
+                <div className="relative">
+                  <div
+                    className="hero-dashboard-spotlight pointer-events-none absolute -inset-6 rounded-[1.5rem] blur-2xl"
+                    aria-hidden
+                  />
+
+                  <div className="hero-dashboard-frame relative rounded-2xl border border-white/20 bg-white p-1.5 sm:p-2">
+                    <div className="overflow-hidden rounded-xl ring-1 ring-black/5">
+                      <Image
+                        src="/hero/dashboard_trial.png"
+                        alt="Wadii banquet management software dashboard for bookings, CRM, payments, and reporting"
+                        width={1920}
+                        height={1080}
+                        priority
+                        sizes="(max-width: 1024px) 92vw, 560px"
+                        className="block h-auto w-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats bar */}
+        <div className="relative z-10 border-t border-white/10">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/10">
+              {STATS.map((s) => (
+                <div key={s.label} className="flex flex-col items-center justify-center gap-1 py-6 px-4">
+                  <div className="flex items-center gap-2 text-[#E62E2D] mb-1">{s.icon}</div>
+                  <p className="text-2xl font-black text-white">{s.value}</p>
+                  <p className="text-white/40 text-xs font-medium uppercase tracking-wide">{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
 }
