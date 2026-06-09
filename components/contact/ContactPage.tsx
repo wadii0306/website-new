@@ -14,7 +14,24 @@ import {
   Clock,
   ShieldCheck,
 } from "lucide-react";
+import axios from "axios";
 import { contactApi } from "../../services/contact.service";
+
+function getContactErrorMessage(error: unknown): string {
+  if (axios.isAxiosError(error)) {
+    if (!error.response) {
+      if (!process.env.NEXT_PUBLIC_API_URL) {
+        return "Contact API is not configured. Set NEXT_PUBLIC_API_URL on the server.";
+      }
+      return "Could not reach the server. Check your connection or try again later.";
+    }
+    const data = error.response.data as { message?: string; errors?: string[] } | undefined;
+    if (data?.errors?.length) return data.errors.join(" ");
+    if (data?.message) return data.message;
+    if (error.response.status === 400) return "Please check your form details and try again.";
+  }
+  return "Something went wrong. Please try again later.";
+}
 
 const CONTACT_EMAIL = "managewisesolutions@gmail.com";
 
@@ -129,8 +146,8 @@ export default function ContactPage() {
       }
     } catch (error: unknown) {
       console.error("Contact form submission error:", error);
-      toast.error("Network error. Please try again later.", {
-        duration: 4000,
+      toast.error(getContactErrorMessage(error), {
+        duration: 5000,
         position: "top-right",
       });
     } finally {
