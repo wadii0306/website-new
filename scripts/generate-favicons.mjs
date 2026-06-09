@@ -1,5 +1,5 @@
 import sharp from "sharp";
-import { readFileSync, writeFileSync } from "node:fs";
+import { writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import toIco from "to-ico";
@@ -131,7 +131,7 @@ async function buildMasterCircle() {
     .toBuffer();
 }
 
-async function buildIcon(circleMaster, iconSize, out) {
+async function buildIconBuffer(circleMaster, iconSize) {
   const renderSize = iconSize <= 48 ? iconSize * 4 : iconSize;
   const rendered = await sharp(circleMaster)
     .resize(renderSize, renderSize, {
@@ -147,25 +147,21 @@ async function buildIcon(circleMaster, iconSize, out) {
     .png()
     .toBuffer();
 
-  await applyBrandRed(downscaled).then((buf) =>
-    sharp(buf).png({ compressionLevel: 9, force: true }).toFile(out)
-  );
+  return applyBrandRed(downscaled);
+}
+
+async function writeIcon(circleMaster, iconSize, out) {
+  const buf = await buildIconBuffer(circleMaster, iconSize);
+  await sharp(buf).png({ compressionLevel: 9, force: true }).toFile(out);
 }
 
 const circleMaster = await buildMasterCircle();
 
 const tabSizes = [16, 32, 48];
+const icoBuffers = await Promise.all(tabSizes.map((size) => buildIconBuffer(circleMaster, size)));
 
-for (const size of tabSizes) {
-  await buildIcon(circleMaster, size, join(root, `public/logo/favicon-${size}.png`));
-}
-
-await buildIcon(circleMaster, 48, join(root, "app/icon.png"));
-await buildIcon(circleMaster, 180, join(root, "app/apple-icon.png"));
-await buildIcon(circleMaster, 192, join(root, "public/logo/icon-192.png"));
-await buildIcon(circleMaster, 512, join(root, "public/logo/wadii-mark.png"));
-
-const icoBuffers = tabSizes.map((size) => readFileSync(join(root, `public/logo/favicon-${size}.png`)));
+await writeIcon(circleMaster, 48, join(root, "app/icon.png"));
+await writeIcon(circleMaster, 180, join(root, "app/apple-icon.png"));
 writeFileSync(join(root, "app/favicon.ico"), await toIco(icoBuffers));
 
 console.log("Favicons generated with solid brand red");
