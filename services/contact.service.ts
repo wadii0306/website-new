@@ -12,7 +12,18 @@ export const contactApi = {
     venueType?: string;
     message?: string;
   }) => {
-    const response = await api.post('/website', contactData)
+    console.info("[Wadii Website] Contact form submission started", {
+      email: contactData.email,
+      banquetName: contactData.banquetName,
+      city: contactData.city,
+    })
+
+    const response = await api.post("/website", contactData)
+
+    console.info("[Wadii Website] Contact form submitted successfully", {
+      email: contactData.email,
+    })
+
     return response.data
   },
 }

@@ -1,4 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wadii Marketing Website
+
+Next.js marketing site for [Wadii](https://www.wadii.in) — banquet management software.
+
+**Repo:** https://github.com/wadii0306/website-new  
+**Changelog:** see [CHANGELOG.md](./CHANGELOG.md)
+
+## Environment
+
+Create `.env` locally (not committed):
+
+```env
+NEXT_PUBLIC_API_URL=https://api.wadii.in/api
+```
+
+Contact form posts to `POST /website` on that API. Leads appear in the product admin under web leads.
 
 ## Getting Started
 
