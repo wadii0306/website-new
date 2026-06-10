@@ -1,8 +1,9 @@
 "use client"
 
 import React from 'react'
+import Link from 'next/link'
 import { Logo } from '@/components/ui/logo'
-import { Mail, Phone, MapPin, Twitter, Linkedin, Instagram } from 'lucide-react'
+import { Mail, MapPin, Twitter, Linkedin, Instagram } from 'lucide-react'
 
 const NAV_LINKS = {
   Product: [
@@ -21,7 +22,7 @@ const NAV_LINKS = {
   Support: [
     { label: 'Help Center', href: '#' },
     { label: 'FAQs',        href: '#faq' },
-    { label: 'Privacy Policy', href: '#' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
     { label: 'Terms of Service', href: '#' },
   ],
 }
@@ -108,13 +109,22 @@ export const Footer = () => {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      onClick={(e) => handleScroll(e, link.href)}
-                      className="text-sm text-white/50 hover:text-white transition-colors duration-150"
-                    >
-                      {link.label}
-                    </a>
+                    {link.href.startsWith('/') ? (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-white/50 hover:text-white transition-colors duration-150"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        onClick={(e) => handleScroll(e, link.href)}
+                        className="text-sm text-white/50 hover:text-white transition-colors duration-150"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -129,9 +139,18 @@ export const Footer = () => {
           <p className="text-white/30 text-xs">
             © {new Date().getFullYear()} Wadii. All rights reserved. Banquet Management Software.
           </p>
-          <p className="text-white/20 text-xs">
-            Made with ❤️ for banquet hall owners across India
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs">
+            <Link
+              href="/privacy-policy"
+              className="text-white/45 hover:text-white transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <p className="text-white/20 hidden sm:block">·</p>
+            <p className="text-white/20 text-xs">
+              Made with ❤️ for banquet hall owners across India
+            </p>
+          </div>
         </div>
       </div>
     </footer>

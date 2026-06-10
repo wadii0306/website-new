@@ -17,15 +17,16 @@ import { Footer } from "@/components/footer/Footer";
 export default function Home() {
   return (
     <main>
-      {/* ACT 1 — Hook: dark hero → light social proof → dark pain */}
+      {/* ACT 1 — Hook: dark hero → social proof → who uses → pain */}
       <HeroSection />
       <SocialProof />
+      <WhoUsesSection />
       <ChallengesSection />
+      <FeatureMappingSection />
       <ComparisonSection />
 
       {/* ACT 2 — Product story: continuous light band (solution → features) */}
       <HowItWorksSection />
-      <FeatureMappingSection />
       <BenefitsSection />
       <FeaturesSection />
 
@@ -35,7 +36,6 @@ export default function Home() {
 
       {/* ACT 4 — Trust & close: light about + FAQ → contact → footer */}
       <AboutSection />
-      <WhoUsesSection />
       <FAQSection />
       <ContactPage />
       <Footer />

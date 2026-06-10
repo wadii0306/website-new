@@ -3,14 +3,13 @@
 import React from 'react'
 
 const BRANDS = [
-  { name: 'The Grand Palace', tag: 'Luxury Venue', style: 'serif', accent: '#5c6f57' },
-  { name: 'Royal Banquet Hall', tag: 'Banquet Hall', style: 'caps', accent: '#1f3b67' },
-  { name: 'Star Events Center', tag: 'Event Center', style: 'script', accent: '#7a4d2a' },
-  { name: 'Crown Convention', tag: 'Convention Space', style: 'caps', accent: '#4a5568' },
-  { name: 'Heritage Banquets', tag: 'Premium Banquets', style: 'serif', accent: '#7a3641' },
-  { name: 'Elite Celebrations', tag: 'Celebration Venue', style: 'script', accent: '#365872' },
-  { name: 'Majestic Gardens', tag: 'Garden Events', style: 'caps', accent: '#576543' },
-  { name: 'Sapphire Hall', tag: 'Hall & Lawn', style: 'serif', accent: '#304f7a' },
+  { name: 'Patidar Bhavan', tag: 'Banquet Hall', style: 'serif', accent: '#5c6f57' },
+  { name: 'Lauriant Hotels & Resorts', tag: 'Hotels & Resorts', style: 'script', accent: '#7a4d2a' },
+  { name: 'Akshata Banquets', tag: 'Banquets', style: 'caps', accent: '#1f3b67' },
+  { name: 'Belleza Banquets', tag: 'Banquets', style: 'serif', accent: '#7a3641' },
+  { name: 'Banjara Royale Banquets', tag: 'Banquets', style: 'caps', accent: '#4a5568' },
+  { name: 'Geet Govind Banquets', tag: 'Banquets', style: 'script', accent: '#365872' },
+  { name: 'Gajlaxmi Hospitality', tag: 'Hospitality', style: 'caps', accent: '#576543' },
 ]
 
 export const SocialProof = () => {
