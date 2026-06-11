@@ -187,8 +187,14 @@ export default function PrivacyPolicyPage() {
         <ul>
           <li>
             Email:{" "}
-            <a href="mailto:support@wadii.in" className="text-[#E62E2D] hover:underline">
-              support@wadii.in
+            <a href="mailto:managewisessolution@gmail.com" className="text-[#E62E2D] hover:underline">
+              managewisessolution@gmail.com
+            </a>
+          </li>
+          <li>
+            Email:{" "}
+            <a href="mailto:wadii0306@gmail.com" className="text-[#E62E2D] hover:underline">
+              wadii0306@gmail.com
             </a>
           </li>
           <li>
