@@ -1,156 +1,202 @@
 import type { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal/LegalPageLayout";
 
-const BASE_URL = "https://www.wadii.in";
+const BASE_URL = "https://wadii.in";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Read how Wadii collects, uses, and protects your data when you use our banquet management software and website.",
+    "How Wadii Technologies collects, uses, and protects your data across our banquet management platform, CRM, website, and related services.",
   alternates: { canonical: `${BASE_URL}/privacy-policy` },
   openGraph: {
     title: "Privacy Policy | Wadii",
     description:
-      "How Wadii handles your personal information, bookings data, and website usage.",
+      "Wadii Technologies privacy policy for our banquet management platform, CRM, website, and integrations.",
     url: `${BASE_URL}/privacy-policy`,
   },
 };
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalPageLayout title="Privacy Policy" lastUpdated="June 3, 2025">
+    <LegalPageLayout title="Privacy Policy" lastUpdated="June 2026">
       <section>
-        <h2>1. Introduction</h2>
+        <h2>Introduction</h2>
         <p>
-          Wadii (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) operates the Wadii banquet management platform and
-          the website at{" "}
-          <a href={BASE_URL} className="text-[#E62E2D] hover:underline">
-            wadii.in
-          </a>
-          . This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit
-          our website, request a demo, contact us, or use our software services.
+          Wadii Technologies (&quot;Wadii&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to
+          protecting the privacy and security of our users. This Privacy Policy explains how we collect, use, disclose,
+          and safeguard information when you use our banquet management platform, CRM system, website, mobile
+          applications, and related services.
         </p>
         <p>
-          By using our website or services, you agree to the collection and use of information in accordance with this
-          policy.
+          By accessing or using our services, you agree to the practices described in this Privacy Policy.
         </p>
       </section>
 
       <section>
-        <h2>2. Information we collect</h2>
-        <p>We may collect the following types of information:</p>
+        <h2>Information We Collect</h2>
+
+        <h3>Information You Provide</h3>
+        <p>We may collect:</p>
         <ul>
-          <li>
-            <strong>Contact information</strong> — name, email address, phone number, venue or company name, and any
-            message you submit through our contact or demo forms.
-          </li>
-          <li>
-            <strong>Account and business data</strong> — information related to your venue, bookings, leads, customers,
-            billing, and team members when you use the Wadii platform as a customer.
-          </li>
-          <li>
-            <strong>Usage data</strong> — pages visited, features used, device type, browser, IP address, and general
-            analytics to improve our website and product.
-          </li>
-          <li>
-            <strong>Cookies and similar technologies</strong> — we use cookies and analytics tools (such as Google Tag
-            Manager) to understand how visitors use our site and to improve performance.
-          </li>
+          <li>Name</li>
+          <li>Email address</li>
+          <li>Phone number</li>
+          <li>Company name</li>
+          <li>Business address</li>
+          <li>User account credentials</li>
+          <li>Event and banquet booking information</li>
+          <li>Customer relationship management (CRM) records</li>
+          <li>Communications and support requests</li>
+        </ul>
+
+        <h3>Automatically Collected Information</h3>
+        <p>We may automatically collect:</p>
+        <ul>
+          <li>IP address</li>
+          <li>Browser type and version</li>
+          <li>Device information</li>
+          <li>Operating system</li>
+          <li>Access times</li>
+          <li>Pages visited</li>
+          <li>Usage analytics and performance data</li>
         </ul>
       </section>
 
       <section>
-        <h2>3. How we use your information</h2>
+        <h2>How We Use Your Information</h2>
         <p>We use collected information to:</p>
         <ul>
-          <li>Provide, operate, and maintain the Wadii banquet management software</li>
-          <li>Respond to enquiries, demo requests, and support messages</li>
-          <li>Onboard venues and manage customer accounts</li>
-          <li>Send service-related communications and product updates</li>
-          <li>Improve our website, features, and user experience</li>
-          <li>Comply with legal obligations and protect against fraud or misuse</li>
+          <li>Provide and maintain our services</li>
+          <li>Manage banquet bookings and event operations</li>
+          <li>Manage customer relationships and CRM activities</li>
+          <li>Improve platform performance and user experience</li>
+          <li>Respond to support requests</li>
+          <li>Send important notifications and service updates</li>
+          <li>Detect fraud, abuse, and security threats</li>
+          <li>Comply with legal obligations</li>
         </ul>
       </section>
 
       <section>
-        <h2>4. Sharing of information</h2>
-        <p>
-          We do not sell your personal information. We may share information only in these cases:
-        </p>
+        <h2>WhatsApp and Meta Platform Data</h2>
+        <p>If you communicate with businesses through WhatsApp integrations powered by Wadii:</p>
         <ul>
-          <li>With trusted service providers who help us operate our website and platform (hosting, analytics, email)</li>
-          <li>When required by law, regulation, or valid legal process</li>
-          <li>To protect the rights, safety, and security of Wadii, our users, or others</li>
-          <li>With your consent or at your direction</li>
+          <li>Messages are processed solely to provide requested services.</li>
+          <li>We do not sell WhatsApp message content.</li>
+          <li>
+            Information received through Meta platforms is used only for authorized business communications and
+            operational purposes.
+          </li>
+          <li>Data handling complies with Meta Platform Terms and applicable privacy regulations.</li>
         </ul>
       </section>
 
       <section>
-        <h2>5. Data retention</h2>
+        <h2>Information Sharing</h2>
+        <p>We do not sell personal information.</p>
+        <p>We may share information with:</p>
+        <ul>
+          <li>Authorized employees and administrators</li>
+          <li>Trusted service providers and hosting partners</li>
+          <li>Payment processors when applicable</li>
+          <li>Legal authorities when required by law</li>
+          <li>Third-party integrations explicitly enabled by the customer</li>
+        </ul>
         <p>
-          We retain personal information only for as long as necessary to fulfil the purposes described in this policy,
-          provide our services, resolve disputes, and comply with legal requirements. When data is no longer needed, we
-          take reasonable steps to delete or anonymize it.
+          All third parties are required to maintain appropriate confidentiality and security measures.
         </p>
       </section>
 
       <section>
-        <h2>6. Data security</h2>
+        <h2>Data Retention</h2>
+        <p>We retain information only as long as necessary to:</p>
+        <ul>
+          <li>Provide services</li>
+          <li>Meet contractual obligations</li>
+          <li>Comply with legal requirements</li>
+          <li>Resolve disputes</li>
+          <li>Enforce agreements</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Data Security</h2>
         <p>
-          We implement appropriate technical and organizational measures to protect your information against unauthorized
-          access, alteration, disclosure, or destruction. However, no method of transmission over the internet or
-          electronic storage is 100% secure.
+          We implement reasonable technical, administrative, and organizational safeguards to protect information from
+          unauthorized access, disclosure, alteration, or destruction.
+        </p>
+        <p>
+          However, no internet transmission or electronic storage method is completely secure.
         </p>
       </section>
 
       <section>
-        <h2>7. Your rights</h2>
+        <h2>User Rights</h2>
+        <p>Depending on applicable laws, users may have the right to:</p>
+        <ul>
+          <li>Access their information</li>
+          <li>Correct inaccurate information</li>
+          <li>Request deletion of personal data</li>
+          <li>Restrict processing</li>
+          <li>Object to certain processing activities</li>
+          <li>Request data portability</li>
+        </ul>
+        <p>Requests may be submitted using the contact information below.</p>
+      </section>
+
+      <section>
+        <h2>Cookies and Analytics</h2>
         <p>
-          Depending on applicable law, you may have the right to access, correct, update, or delete your personal
-          information, or to object to or restrict certain processing. To make a request, contact us using the details
-          below.
+          We may use cookies, analytics tools, and similar technologies to improve website functionality, understand
+          user behavior, and enhance service performance.
+        </p>
+        <p>Users may control cookies through browser settings.</p>
+      </section>
+
+      <section>
+        <h2>Third-Party Services</h2>
+        <p>
+          Our platform may contain links to third-party services. We are not responsible for the privacy practices of
+          external websites or services.
         </p>
       </section>
 
       <section>
-        <h2>8. Third-party links</h2>
+        <h2>Children&apos;s Privacy</h2>
         <p>
-          Our website may contain links to third-party websites. We are not responsible for the privacy practices of
-          those sites. We encourage you to review their privacy policies separately.
+          Our services are intended for business and professional use and are not directed toward children under 13 years
+          of age.
+        </p>
+        <p>We do not knowingly collect information from children.</p>
+      </section>
+
+      <section>
+        <h2>Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy periodically. Updated versions will be posted on this page with a revised
+          effective date.
         </p>
       </section>
 
       <section>
-        <h2>9. Children&apos;s privacy</h2>
+        <h2>Contact Us</h2>
+        <p>For privacy-related questions or requests, contact:</p>
         <p>
-          Wadii is a business software product and is not directed at children under 18. We do not knowingly collect
-          personal information from children.
-        </p>
-      </section>
-
-      <section>
-        <h2>10. Changes to this policy</h2>
-        <p>
-          We may update this Privacy Policy from time to time. The updated version will be posted on this page with a
-          revised &quot;Last updated&quot; date. Continued use of our website or services after changes constitutes
-          acceptance of the updated policy.
-        </p>
-      </section>
-
-      <section>
-        <h2>11. Contact us</h2>
-        <p>
-          If you have questions about this Privacy Policy or how we handle your data, contact us at:
+          <strong>Wadii Technologies</strong>
         </p>
         <ul>
           <li>
             Email:{" "}
-            <a href="mailto:managewisesolutions@gmail.com" className="text-[#E62E2D] hover:underline">
-              managewisesolutions@gmail.com
+            <a href="mailto:support@wadii.in" className="text-[#E62E2D] hover:underline">
+              support@wadii.in
             </a>
           </li>
-          <li>Website: {BASE_URL}</li>
-          <li>Location: India</li>
+          <li>
+            Website:{" "}
+            <a href={BASE_URL} className="text-[#E62E2D] hover:underline">
+              {BASE_URL}
+            </a>
+          </li>
         </ul>
       </section>
     </LegalPageLayout>

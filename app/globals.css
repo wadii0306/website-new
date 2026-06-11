@@ -422,6 +422,14 @@
   margin-bottom: 0.75rem;
 }
 
+.legal-prose h3 {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: #111a2d;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .legal-prose p {
   font-size: 0.9375rem;
   color: #4b5563;

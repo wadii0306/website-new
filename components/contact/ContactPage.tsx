@@ -21,9 +21,9 @@ function getContactErrorMessage(error: unknown): string {
   if (axios.isAxiosError(error)) {
     if (!error.response) {
       if (!process.env.NEXT_PUBLIC_API_URL) {
-        return "Contact API is not configured. Set NEXT_PUBLIC_API_URL on the server.";
+        return "Contact API is not configured. Add NEXT_PUBLIC_API_URL=https://api.wadii.in/api in Vercel and redeploy.";
       }
-      return "Could not reach the server. Check your connection or try again later.";
+      return "Could not reach the Wadii API. Ask your team to confirm NEXT_PUBLIC_API_URL is set to https://api.wadii.in/api on Vercel and redeploy.";
     }
     const data = error.response.data as { message?: string; errors?: string[] } | undefined;
     if (data?.errors?.length) return data.errors.join(" ");

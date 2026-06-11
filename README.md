@@ -7,13 +7,15 @@ Next.js marketing site for [Wadii](https://www.wadii.in) — banquet management 
 
 ## Environment
 
-Create `.env` locally (not committed):
+Copy `env.example` to `.env` locally, or set the same variable in **Vercel → Settings → Environment Variables**:
 
 ```env
 NEXT_PUBLIC_API_URL=https://api.wadii.in/api
 ```
 
-Contact form posts to `POST /website` on that API. Leads appear in the product admin under web leads.
+**Important:** `NEXT_PUBLIC_*` variables are baked in at build time. After adding or changing this on Vercel, you must **Redeploy** the project.
+
+Contact form posts to `POST /website` → full URL `https://api.wadii.in/api/website`. Leads appear in product admin under web leads.
 
 ## Getting Started
 
