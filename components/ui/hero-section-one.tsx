@@ -46,8 +46,8 @@ export default function HeroSection() {
             }} />
         </div>
 
-        <div className="relative z-10 flex-1 flex flex-col justify-center pt-24 pb-16">
-          <div className="max-w-6xl mx-auto px-6 w-full">
+        <div className="relative z-10 flex-1 flex flex-col justify-center pt-[calc(6rem+env(safe-area-inset-top,0px))] pb-16">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full">
             <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-10 lg:gap-8 xl:gap-10 items-center">
 
               {/* Left: copy */}
@@ -64,7 +64,7 @@ export default function HeroSection() {
 
                 {/* H1 — keyword-rich for SEO */}
                 <h1
-                  className="max-w-[18ch] sm:max-w-none text-[36px] sm:text-[44px] lg:text-[2.75rem] leading-[1.12] tracking-tight mb-5 animate-fade-up animate-delay-100"
+                  className="text-[32px] sm:text-[44px] lg:text-[2.75rem] leading-[1.12] tracking-tight mb-5 animate-fade-up animate-delay-100 text-balance"
                   style={{ fontFamily: "'Space Grotesk', 'Poppins', sans-serif", color: '#FFFFFF', fontWeight: 700 }}
                 >
                   Banquet Management Software for{' '}
@@ -154,7 +154,7 @@ export default function HeroSection() {
 
         {/* Stats bar */}
         <div className="relative z-10 border-t border-white/10">
-          <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/10">
               {STATS.map((s) => (
                 <div key={s.label} className="flex flex-col items-center justify-center gap-1 py-6 px-4">

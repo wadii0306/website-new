@@ -141,7 +141,7 @@ export const WhoUsesSection = () => {
         }}
       />
 
-      <div className="relative max-w-6xl mx-auto px-6">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-8 lg:gap-12 items-start">
           {/* Sticky panel */}
           <div className="lg:sticky lg:top-28 lg:self-start">
@@ -157,7 +157,7 @@ export const WhoUsesSection = () => {
               Banquet management software for every venue that runs events, bookings, and customer relationships at scale.
             </p>
 
-            <div className="rounded-2xl border border-[#e8edf5] bg-white overflow-hidden shadow-[0_16px_40px_rgba(17,26,45,0.07)]">
+            <div className="hidden lg:block rounded-2xl border border-[#e8edf5] bg-white overflow-hidden shadow-[0_16px_40px_rgba(17,26,45,0.07)]">
               <div className="h-0.5 w-full bg-gradient-to-r from-[#111A2D] via-[#E62E2D] to-[#111A2D]" />
 
               <div className="p-5 md:p-6">
@@ -332,7 +332,7 @@ export const WhoUsesSection = () => {
                             <div
                               className={[
                                 "flex flex-wrap gap-1.5 transition-all duration-400 overflow-hidden",
-                                isActive ? "mt-3 max-h-16 opacity-100" : "max-h-0 opacity-0 mt-0",
+                                isActive ? "mt-3 max-h-none sm:max-h-16 opacity-100" : "max-h-0 opacity-0 mt-0",
                               ].join(" ")}
                             >
                               {item.chips.map((chip) => (

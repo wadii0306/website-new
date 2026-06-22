@@ -19,7 +19,7 @@ export const SocialProof = () => {
       className="py-16 section-surface-white border-b border-gray-100"
       aria-label="Trusted by leading banquet venues"
     >
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.24em] text-gray-400 mb-2">
           Trusted by <span className="text-[#111A2D] font-bold">500+ venues</span> across India
         </p>

@@ -82,7 +82,7 @@ export const ChallengesSection = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-14">
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-5 bg-[#E62E2D]/15 text-[#ff8a89] border border-[#E62E2D]/30">
             <AlertTriangle className="w-3.5 h-3.5" />

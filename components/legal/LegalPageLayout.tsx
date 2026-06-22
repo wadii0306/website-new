@@ -13,7 +13,7 @@ export function LegalPageLayout({ title, lastUpdated, children }: LegalPageLayou
   return (
     <div className="min-h-screen bg-[#f8f9fb] flex flex-col">
       <header className="sticky top-0 z-50 border-b border-[#e8edf5] bg-white/90 backdrop-blur-md">
-        <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
           <Link href="/" className="shrink-0" aria-label="Wadii home">
             <Logo variant="light" className="h-9 w-auto" />
           </Link>
@@ -28,7 +28,7 @@ export function LegalPageLayout({ title, lastUpdated, children }: LegalPageLayou
       </header>
 
       <main className="flex-1">
-        <div className="max-w-3xl mx-auto px-6 py-12 md:py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-16">
           <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#E62E2D] mb-3">
             Legal
           </p>
@@ -44,7 +44,7 @@ export function LegalPageLayout({ title, lastUpdated, children }: LegalPageLayou
       </main>
 
       <footer className="border-t border-[#e8edf5] bg-white">
-        <div className="max-w-3xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400">
           <p>© {OPERATOR_NAME}. All Rights Reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:text-[#E62E2D] transition-colors font-medium">

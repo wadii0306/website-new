@@ -208,7 +208,7 @@ export const AboutSection = () => {
     <section ref={sectionRef} id="about" className="w-full bg-white" style={{ color: '#1D2638' }}>
 
       {/* ── PART 1: About Wadii (Balanced editorial + structured cards) ── */}
-      <div data-nav-theme="light" className="max-w-6xl mx-auto px-6 py-20">
+      <div data-nav-theme="light" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
         <div className="wadii-reveal mb-4">
           <span
             style={{
@@ -330,7 +330,7 @@ export const AboutSection = () => {
           }}
         />
 
-        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-24">
           <div className="wadii-reveal text-center max-w-2xl mx-auto mb-12 md:mb-14">
             <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-5 bg-white/5 text-white/70 border border-white/10">
               Why Trust Us
@@ -434,7 +434,7 @@ export const AboutSection = () => {
           aria-hidden
         />
 
-        <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-28">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
           <div className="wadii-reveal text-center max-w-3xl mx-auto mb-12 md:mb-16">
             <span className="wadii-pill" style={pillStyle}>Direction</span>
             <h2

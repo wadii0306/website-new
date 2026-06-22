@@ -34,7 +34,7 @@ export const PricingSection = () => {
         />
       </div>
 
-      <div className="relative mx-auto max-w-3xl px-6">
+      <div className="relative mx-auto max-w-3xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export const PricingSection = () => {
           <span className="mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold tracking-[0.2em] uppercase text-white/60">
             Pricing
           </span>
-          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl leading-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white md:text-4xl leading-tight text-balance max-w-2xl mx-auto">
             Choose the Right Banquet Management Software Plan for Your Venue
           </h2>
           <p className="mt-4 text-base text-white/55 leading-relaxed max-w-2xl mx-auto">

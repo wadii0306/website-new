@@ -207,12 +207,12 @@ export const HeroHeader = () => {
     <header className="relative z-50">
       <nav
         className={[
-          'fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]',
+          'fixed top-0 inset-x-0 z-50 pt-[env(safe-area-inset-top,0px)] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]',
           navSurface,
         ].join(' ')}
         aria-label="Main navigation"
       >
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center h-[68px]">
             <Link
               href="/"
@@ -275,10 +275,10 @@ export const HeroHeader = () => {
           className={[
             'lg:hidden overflow-hidden border-t backdrop-blur-xl transition-all duration-300 ease-in-out',
             mobilePanel,
-            open ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0 border-t-transparent',
+            open ? 'max-h-[85dvh] opacity-100' : 'max-h-0 opacity-0 border-t-transparent',
           ].join(' ')}
         >
-          <div className="max-w-6xl mx-auto px-6 py-4 space-y-1">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 space-y-1">
             {NAV_ITEMS.map((item) => {
               const isActive = activeHash === item.href
               return (

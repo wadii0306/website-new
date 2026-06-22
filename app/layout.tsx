@@ -75,6 +75,11 @@ export const metadata: Metadata = {
   alternates: { canonical: BASE_URL },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -113,7 +118,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
         {children}
-        <Toaster position="top-right" richColors />
+        <Toaster position="top-right" richColors offset={72} />
       </body>
     </html>
   );

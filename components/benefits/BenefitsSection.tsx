@@ -74,7 +74,7 @@ export const BenefitsSection = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 md:mb-14">
           <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-5 bg-red-50 text-[#E62E2D] border border-red-100">
             Benefits
@@ -95,7 +95,7 @@ export const BenefitsSection = () => {
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
           variants={{ show: { transition: { staggerChildren: 0.1 } } }}
-          className="mb-8 grid grid-cols-3 gap-3 md:gap-5 rounded-2xl border border-[#e8edf5] bg-gradient-to-r from-[#f8f9fb] via-white to-[#f8f9fb] p-4 md:p-6"
+          className="mb-8 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-5 rounded-2xl border border-[#e8edf5] bg-gradient-to-r from-[#f8f9fb] via-white to-[#f8f9fb] p-4 md:p-6"
         >
           {METRICS.map((m, i) => (
             <motion.div

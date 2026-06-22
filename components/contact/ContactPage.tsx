@@ -180,7 +180,7 @@ export default function ContactPage() {
         aria-hidden
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* Left */}
           <div>
@@ -195,14 +195,14 @@ export default function ContactPage() {
               Speak with our team to see how Wadii can help streamline bookings, customer management, billing, reporting, and daily banquet operations.
             </p>
 
-            <div className="grid grid-cols-3 gap-3 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
               {QUICK_STATS.map((s) => (
                 <div
                   key={s.label}
                   className="rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-center"
                 >
                   <p className="text-base font-extrabold text-white">{s.value}</p>
-                  <p className="text-[9px] font-semibold uppercase tracking-wide text-white/45 mt-0.5">
+                  <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-white/45 mt-0.5">
                     {s.label}
                   </p>
                 </div>
@@ -215,7 +215,7 @@ export default function ContactPage() {
                 className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white hover:bg-white/10 transition-colors"
               >
                 <Mail className="h-4 w-4 text-[#ff8a89] shrink-0" />
-                <span className="text-sm font-medium">{CONTACT_EMAIL}</span>
+                <span className="text-sm font-medium break-all">{CONTACT_EMAIL}</span>
               </a>
               <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white/80">
                 <Clock className="h-4 w-4 text-[#ff8a89] shrink-0" />

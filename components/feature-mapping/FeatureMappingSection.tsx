@@ -160,7 +160,7 @@ export const FeatureMappingSection = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 md:mb-14">
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-5 bg-red-50 text-[#E62E2D] border border-red-100">
             <Sparkles className="w-3.5 h-3.5" />
@@ -179,7 +179,7 @@ export const FeatureMappingSection = () => {
         <div className="mapping-showcase-shell rounded-3xl border border-[#e8edf5] p-4 md:p-6 lg:p-7">
           <div className="grid lg:grid-cols-[minmax(0,300px)_1fr] gap-5 lg:gap-7 items-stretch">
             {/* Capability rail */}
-            <aside className="relative">
+            <aside className="relative hidden lg:block">
               <div
                 ref={railTrackRef}
                 className="feature-rail-track pointer-events-none absolute left-[19px] hidden lg:block w-0.5 rounded-full bg-[#e8edf5]"
@@ -250,7 +250,7 @@ export const FeatureMappingSection = () => {
             </aside>
 
             {/* Active capability */}
-            <article className="rounded-2xl border border-[#e8edf5] bg-white overflow-hidden shadow-sm flex flex-col min-h-[420px]">
+            <article className="rounded-2xl border border-[#e8edf5] bg-white overflow-hidden shadow-sm flex flex-col min-h-0 sm:min-h-[420px]">
               <div className="relative overflow-hidden bg-gradient-to-br from-[#111A2D] via-[#152238] to-[#0f1628] px-6 py-7 md:px-8 md:py-8">
                 <div
                   className="pointer-events-none absolute -right-2 -top-4 text-[88px] font-black leading-none text-white/[0.04] select-none"
@@ -271,11 +271,11 @@ export const FeatureMappingSection = () => {
 
                   <div className="flex items-start justify-between gap-4">
                     <div className="min-w-0">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#E62E2D] to-[#b82423] text-white shadow-lg shadow-red-900/35">
+                      <div className="flex flex-col sm:flex-row sm:items-start gap-3 mb-2">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#E62E2D] to-[#b82423] text-white shadow-lg shadow-red-900/35 shrink-0">
                           <CurrentIcon className="h-6 w-6" />
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight leading-tight">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white tracking-tight leading-tight min-w-0">
                           {current.title}
                         </h3>
                       </div>

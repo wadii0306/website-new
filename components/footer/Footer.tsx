@@ -3,8 +3,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { Logo } from '@/components/ui/logo'
-import { Mail, MapPin, Instagram } from 'lucide-react'
-import { INSTAGRAM_URL, OPERATOR_NAME, PRODUCT_NAME } from '@/lib/brand'
+import { Mail, MapPin, Instagram, Linkedin } from 'lucide-react'
+import { INSTAGRAM_URL, LINKEDIN_URL, OPERATOR_NAME, PRODUCT_NAME } from '@/lib/brand'
 
 const NAV_LINKS = {
   Product: [
@@ -30,6 +30,7 @@ const NAV_LINKS = {
 
 const SOCIALS = [
   { Icon: Instagram, href: INSTAGRAM_URL, label: 'Wadii on Instagram' },
+  { Icon: Linkedin, href: LINKEDIN_URL, label: 'Wadii on LinkedIn' },
 ]
 
 export const Footer = () => {
@@ -46,7 +47,7 @@ export const Footer = () => {
 
       {/* CTA Banner */}
       <div className="bg-gradient-to-r from-[#111A2D] to-[#1D2638] border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-2xl font-extrabold text-white mb-1">
               Ready to streamline your banquet hall?
@@ -64,8 +65,8 @@ export const Footer = () => {
       </div>
 
       {/* Main footer */}
-      <div className="max-w-6xl mx-auto px-6 py-14">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10">
 
           {/* Brand col */}
           <div className="col-span-2 md:col-span-2">
@@ -79,9 +80,9 @@ export const Footer = () => {
 
             {/* Contact info */}
             <div className="space-y-2.5">
-              <a href="mailto:managewisessolution@gmail.com" className="flex items-center gap-2.5 text-white/50 hover:text-white text-sm transition-colors">
-                <Mail className="w-4 h-4 text-[#E62E2D]" />
-                managewisessolution@gmail.com
+              <a href="mailto:managewisessolution@gmail.com" className="flex items-center gap-2.5 text-white/50 hover:text-white text-sm transition-colors min-w-0">
+                <Mail className="w-4 h-4 text-[#E62E2D] shrink-0" />
+                <span className="break-all">managewisessolution@gmail.com</span>
               </a>
               <div className="flex items-center gap-2.5 text-white/50 text-sm">
                 <MapPin className="w-4 h-4 text-[#E62E2D]" />
@@ -139,7 +140,7 @@ export const Footer = () => {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/30 text-xs text-center sm:text-left">
             © {OPERATOR_NAME}. All Rights Reserved.
           </p>

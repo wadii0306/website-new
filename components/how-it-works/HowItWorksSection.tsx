@@ -169,7 +169,7 @@ export const HowItWorksSection = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-10 md:mb-12">
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-5 bg-red-50 text-[#E62E2D] border border-red-100">
@@ -205,8 +205,7 @@ export const HowItWorksSection = () => {
         <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-12 items-start">
           {/* Detail card — sticky while scrolling steps */}
           <div
-            className="sticky z-10 self-start mb-2 lg:mb-0"
-            style={{ top: NAV_OFFSET }}
+            className="lg:sticky lg:top-28 z-10 self-start mb-2 lg:mb-0"
           >
             <div className="relative rounded-3xl border border-[#1a2742] bg-gradient-to-br from-[#111A2D] via-[#152238] to-[#0f1628] p-7 md:p-10 shadow-2xl shadow-[#111A2D]/20 overflow-hidden">
               <div
@@ -346,7 +345,7 @@ export const HowItWorksSection = () => {
                           </div>
 
                           <div className="min-w-0 flex-1">
-                            <div className="flex items-center justify-between gap-2 mb-1.5">
+                            <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-2 mb-1.5">
                               <p
                                 className={[
                                   "text-[15px] font-semibold leading-snug transition-colors duration-500",

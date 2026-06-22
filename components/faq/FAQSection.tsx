@@ -80,7 +80,7 @@ export const FAQSection = () => {
         }}
       />
 
-      <div className="relative max-w-3xl mx-auto px-6">
+      <div className="relative max-w-3xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={false}
           animate={mounted ? { opacity: 1, y: 0 } : false}
@@ -125,12 +125,12 @@ export const FAQSection = () => {
                   type="button"
                   suppressHydrationWarning
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 md:px-6 md:py-5 text-left"
+                  className="flex w-full items-center justify-between gap-3 sm:gap-4 px-4 py-4 sm:px-5 md:px-6 md:py-5 text-left"
                   aria-expanded={isOpen}
                 >
                   <span
                     className={[
-                      "font-semibold text-[15px] leading-snug transition-colors",
+                      "font-semibold text-sm sm:text-[15px] leading-snug transition-colors pr-1",
                       isOpen ? "text-[#E62E2D]" : "text-[#111A2D] group-hover:text-[#1D2638]",
                     ].join(" ")}
                   >

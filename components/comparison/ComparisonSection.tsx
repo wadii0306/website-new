@@ -424,7 +424,7 @@ export const ComparisonSection = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-5 bg-[#E62E2D]/15 text-[#ff8a89] border border-[#E62E2D]/30">
@@ -497,7 +497,7 @@ export const ComparisonSection = () => {
                     {topic.manualTitle}
                   </h3>
 
-                  <div className="mb-5 opacity-75 saturate-50">
+                  <div className="mb-5 opacity-75 saturate-50 scale-[0.95] sm:scale-100 origin-top">
                     <ManualVisual />
                   </div>
 
@@ -542,7 +542,7 @@ export const ComparisonSection = () => {
                     {topic.wadiiTitle}
                   </h3>
 
-                  <div className="mb-5 ring-1 ring-[#E62E2D]/20 rounded-xl shadow-lg shadow-red-900/10">
+                  <div className="mb-5 ring-1 ring-[#E62E2D]/20 rounded-xl shadow-lg shadow-red-900/10 scale-[0.95] sm:scale-100 origin-top">
                     <WadiiVisual />
                   </div>
 

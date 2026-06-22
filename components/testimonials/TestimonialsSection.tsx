@@ -56,7 +56,7 @@ export const TestimonialsSection = () => {
           style={{ background: 'radial-gradient(ellipse, #E62E2D 0%, transparent 70%)' }} />
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
         <div className="text-center mb-16">
@@ -87,7 +87,7 @@ export const TestimonialsSection = () => {
           {TESTIMONIALS.map((t, i) => (
             <div
               key={t.name}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 hover:bg-white/8 transition-all duration-300 group hover-lift card-glow min-h-[300px] flex flex-col"
+              className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 hover:bg-white/8 transition-all duration-300 group hover-lift card-glow flex flex-col"
             >
               {/* Quote icon */}
               <Quote className="w-6 h-6 text-[#E62E2D] mb-4 opacity-60" />

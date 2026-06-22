@@ -1,4 +1,4 @@
-import { INSTAGRAM_URL, OPERATOR_NAME, PRODUCT_NAME, SITE_URL } from "./brand";
+import { INSTAGRAM_URL, LINKEDIN_URL, OPERATOR_NAME, PRODUCT_NAME, SITE_URL } from "./brand";
 
 export const SEO_FAQ_ENTRIES = [
   {
@@ -43,7 +43,7 @@ export const jsonLdGraph = {
         name: "Jainam Shah",
       },
       email: "managewisessolution@gmail.com",
-      sameAs: [SITE_URL, INSTAGRAM_URL],
+      sameAs: [SITE_URL, INSTAGRAM_URL, LINKEDIN_URL],
     },
     {
       "@type": "SoftwareApplication",

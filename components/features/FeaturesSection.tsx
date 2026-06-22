@@ -230,13 +230,13 @@ export const FeaturesSection = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mb-10 text-center md:mb-12">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-red-100 bg-red-50 px-4 py-1.5 text-xs font-bold tracking-[0.2em] uppercase text-[#E62E2D]">
             <Sparkles className="h-3.5 w-3.5" />
             Platform Features
           </span>
-          <h2 className="text-4xl font-extrabold leading-[1.12] tracking-tight text-[#111A2D] md:text-[2.75rem]">
+          <h2 className="text-2xl sm:text-4xl font-extrabold leading-[1.12] tracking-tight text-[#111A2D] md:text-[2.75rem] text-balance">
             Powerful Features Built for
             <br />
             <span className="gradient-text">Banquet Hall Management</span>
@@ -246,7 +246,7 @@ export const FeaturesSection = () => {
           </p>
         </div>
 
-        <div className="mb-14 grid grid-cols-3 gap-3 rounded-2xl border border-[#e8edf5] bg-white p-4 md:gap-5 md:p-5">
+        <div className="mb-14 grid grid-cols-1 sm:grid-cols-3 gap-3 rounded-2xl border border-[#e8edf5] bg-white p-4 md:gap-5 md:p-5">
           {PLATFORM_STATS.map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="text-xl font-extrabold tracking-tight text-[#111A2D] md:text-2xl">
@@ -360,7 +360,7 @@ export const FeaturesSection = () => {
                         <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
                         <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
                         <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-                        <span className="ml-2 text-[10px] font-medium text-white/35">
+                        <span className="ml-2 min-w-0 truncate text-[10px] font-medium text-white/35">
                           wadii.app — {feature.title.toLowerCase()}
                         </span>
                       </div>
@@ -409,7 +409,7 @@ export const FeaturesSection = () => {
                       </span>
                     </div>
 
-                    <div className="mb-4 flex items-center gap-3">
+                    <div className="mb-4 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3">
                       <span
                         className={[
                           "flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white shadow-lg transition-all duration-300",
@@ -418,7 +418,7 @@ export const FeaturesSection = () => {
                       >
                         <Icon className="h-5 w-5" />
                       </span>
-                      <h3 className="text-2xl font-extrabold tracking-tight text-[#111A2D] md:text-[1.65rem]">
+                      <h3 className="text-xl sm:text-2xl font-extrabold tracking-tight text-[#111A2D] md:text-[1.65rem] min-w-0">
                         {feature.title}
                       </h3>
                     </div>
