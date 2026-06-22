@@ -1,4 +1,4 @@
-const BASE_URL = "https://www.wadii.in";
+import { INSTAGRAM_URL, OPERATOR_NAME, PRODUCT_NAME, SITE_URL } from "./brand";
 
 export const SEO_FAQ_ENTRIES = [
   {
@@ -24,34 +24,38 @@ export const jsonLdGraph = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": `${BASE_URL}/#organization`,
-      name: "Wadii",
-      url: BASE_URL,
+      "@id": `${SITE_URL}/#organization`,
+      name: PRODUCT_NAME,
+      url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/logo/main_logo.png`,
+        url: `${SITE_URL}/logo/main_logo.png`,
       },
       description:
-        "Wadii is a banquet management software that helps banquet halls, hotels, and event venues manage bookings, leads, payments, vendor management, CRM, and reporting.",
+        `${PRODUCT_NAME} is a banquet management software operated by ${OPERATOR_NAME}. It helps banquet halls, hotels, and event venues manage bookings, leads, payments, vendor management, CRM, and reporting.`,
       foundingDate: "2025-06-03",
+      parentOrganization: {
+        "@type": "Organization",
+        name: OPERATOR_NAME,
+      },
       founder: {
         "@type": "Person",
         name: "Jainam Shah",
       },
-      email: "managewisesolutions@gmail.com",
-      sameAs: [BASE_URL, "https://www.instagram.com/wadii.app"],
+      email: "managewisessolution@gmail.com",
+      sameAs: [SITE_URL, INSTAGRAM_URL],
     },
     {
       "@type": "SoftwareApplication",
-      "@id": `${BASE_URL}/#software`,
-      name: "Wadii",
+      "@id": `${SITE_URL}/#software`,
+      name: PRODUCT_NAME,
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      url: BASE_URL,
+      url: SITE_URL,
       description:
         "Wadii is a cloud-based banquet management software and banquet management system for banquet halls, hotels, wedding venues, and event management businesses. It helps manage bookings, leads, customer relationships, vendor management, payments, billing, and analytics from one platform.",
       publisher: {
-        "@id": `${BASE_URL}/#organization`,
+        "@id": `${SITE_URL}/#organization`,
       },
       offers: {
         "@type": "Offer",
@@ -75,16 +79,16 @@ export const jsonLdGraph = {
     },
     {
       "@type": "WebSite",
-      "@id": `${BASE_URL}/#website`,
-      url: BASE_URL,
-      name: "Wadii",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: PRODUCT_NAME,
       publisher: {
-        "@id": `${BASE_URL}/#organization`,
+        "@id": `${SITE_URL}/#organization`,
       },
     },
     {
       "@type": "FAQPage",
-      "@id": `${BASE_URL}/#faq`,
+      "@id": `${SITE_URL}/#faq`,
       mainEntity: SEO_FAQ_ENTRIES.map((faq) => ({
         "@type": "Question",
         name: faq.q,

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 import { ArrowLeft } from "lucide-react";
+import { OPERATOR_NAME } from "@/lib/brand";
 
 type LegalPageLayoutProps = {
   title: string;
@@ -44,10 +45,13 @@ export function LegalPageLayout({ title, lastUpdated, children }: LegalPageLayou
 
       <footer className="border-t border-[#e8edf5] bg-white">
         <div className="max-w-3xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400">
-          <p>© {new Date().getFullYear()} Wadii. All rights reserved.</p>
+          <p>© {OPERATOR_NAME}. All Rights Reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/privacy-policy" className="hover:text-[#E62E2D] transition-colors font-medium">
               Privacy Policy
+            </Link>
+            <Link href="/terms-of-service" className="hover:text-[#E62E2D] transition-colors font-medium">
+              Terms of Service
             </Link>
             <Link href="/" className="hover:text-[#111A2D] transition-colors">
               wadii.in

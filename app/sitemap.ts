@@ -1,53 +1,58 @@
 import { MetadataRoute } from "next";
-
-const BASE_URL = "https://www.wadii.in";
+import { SITE_URL } from "@/lib/brand";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: BASE_URL,
+      url: SITE_URL,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${BASE_URL}/#features`,
+      url: `${SITE_URL}/#features`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/#pricing`,
+      url: `${SITE_URL}/#pricing`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/#about`,
+      url: `${SITE_URL}/#about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: `${BASE_URL}/#who-uses-wadii`,
+      url: `${SITE_URL}/#who-uses-wadii`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/#faq`,
+      url: `${SITE_URL}/#faq`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/#contact`,
+      url: `${SITE_URL}/#contact`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/privacy-policy`,
+      url: `${SITE_URL}/privacy-policy`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.4,
+    },
+    {
+      url: `${SITE_URL}/terms-of-service`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.4,

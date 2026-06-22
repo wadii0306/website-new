@@ -3,7 +3,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { Logo } from '@/components/ui/logo'
-import { Mail, MapPin, Twitter, Linkedin, Instagram } from 'lucide-react'
+import { Mail, MapPin, Instagram } from 'lucide-react'
+import { INSTAGRAM_URL, OPERATOR_NAME, PRODUCT_NAME } from '@/lib/brand'
 
 const NAV_LINKS = {
   Product: [
@@ -23,14 +24,12 @@ const NAV_LINKS = {
     { label: 'Help Center', href: '#' },
     { label: 'FAQs',        href: '#faq' },
     { label: 'Privacy Policy', href: '/privacy-policy' },
-    { label: 'Terms of Service', href: '#' },
+    { label: 'Terms of Service', href: '/terms-of-service' },
   ],
 }
 
 const SOCIALS = [
-  { Icon: Twitter,   href: '#', label: 'Twitter'   },
-  { Icon: Linkedin,  href: '#', label: 'LinkedIn'  },
-  { Icon: Instagram, href: '#', label: 'Instagram' },
+  { Icon: Instagram, href: INSTAGRAM_URL, label: 'Wadii on Instagram' },
 ]
 
 export const Footer = () => {
@@ -70,16 +69,19 @@ export const Footer = () => {
 
           {/* Brand col */}
           <div className="col-span-2 md:col-span-2">
-            <Logo variant="dark" className="h-10 w-auto mb-5" />
+            <Logo variant="dark" className="h-10 w-auto mb-3" />
+            <p className="text-white/40 text-xs font-medium mb-1">
+              Powered by {OPERATOR_NAME}
+            </p>
             <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-xs">
               The #1 banquet management software for event venues, party halls, and wedding halls. Simplify your operations, grow your bookings.
             </p>
 
             {/* Contact info */}
             <div className="space-y-2.5">
-              <a href="mailto:managewisesolutions@gmail.com" className="flex items-center gap-2.5 text-white/50 hover:text-white text-sm transition-colors">
+              <a href="mailto:managewisessolution@gmail.com" className="flex items-center gap-2.5 text-white/50 hover:text-white text-sm transition-colors">
                 <Mail className="w-4 h-4 text-[#E62E2D]" />
-                managewisesolutions@gmail.com
+                managewisessolution@gmail.com
               </a>
               <div className="flex items-center gap-2.5 text-white/50 text-sm">
                 <MapPin className="w-4 h-4 text-[#E62E2D]" />
@@ -93,6 +95,8 @@ export const Footer = () => {
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
                 >
@@ -136,8 +140,8 @@ export const Footer = () => {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} Wadii. All rights reserved. Banquet Management Software.
+          <p className="text-white/30 text-xs text-center sm:text-left">
+            © {OPERATOR_NAME}. All Rights Reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs">
             <Link
@@ -147,8 +151,15 @@ export const Footer = () => {
               Privacy Policy
             </Link>
             <p className="text-white/20 hidden sm:block">·</p>
-            <p className="text-white/20 text-xs">
-              Made with ❤️ for banquet hall owners across India
+            <Link
+              href="/terms-of-service"
+              className="text-white/45 hover:text-white transition-colors"
+            >
+              Terms of Service
+            </Link>
+            <p className="text-white/20 hidden sm:block">·</p>
+            <p className="text-white/30 text-xs">
+              {PRODUCT_NAME} — banquet management software
             </p>
           </div>
         </div>

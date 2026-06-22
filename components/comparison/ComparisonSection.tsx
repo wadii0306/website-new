@@ -63,8 +63,8 @@ function MockWadiiBookings() {
         <span className="rounded-full bg-emerald-500/20 px-2 py-0.5 text-[9px] font-bold text-emerald-400">LIVE</span>
       </div>
       <div className="grid grid-cols-7 gap-1 text-center text-[9px] text-white/35 mb-1">
-        {["M", "T", "W", "T", "F", "S", "S"].map((d) => (
-          <span key={d}>{d}</span>
+        {["M", "T", "W", "T", "F", "S", "S"].map((d, i) => (
+          <span key={i}>{d}</span>
         ))}
       </div>
       <div className="grid grid-cols-7 gap-1">

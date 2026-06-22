@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import { LegalPageLayout } from "@/components/legal/LegalPageLayout";
-
-const BASE_URL = "https://wadii.in";
+import { OPERATOR_NAME, PRODUCT_NAME, SITE_URL } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Wadii Technologies collects, uses, and protects your data across our banquet management platform, CRM, website, and related services.",
-  alternates: { canonical: `${BASE_URL}/privacy-policy` },
+    `How ${PRODUCT_NAME}, operated by ${OPERATOR_NAME}, collects, uses, and protects your data.`,
+  alternates: { canonical: `${SITE_URL}/privacy-policy` },
   openGraph: {
-    title: "Privacy Policy | Wadii",
+    title: `Privacy Policy | ${PRODUCT_NAME}`,
     description:
-      "Wadii Technologies privacy policy for our banquet management platform, CRM, website, and integrations.",
-    url: `${BASE_URL}/privacy-policy`,
+      `${PRODUCT_NAME} is operated by ${OPERATOR_NAME}. Privacy policy for our banquet management platform and website.`,
+    url: `${SITE_URL}/privacy-policy`,
   },
 };
 
@@ -22,9 +21,14 @@ export default function PrivacyPolicyPage() {
       <section>
         <h2>Introduction</h2>
         <p>
-          Wadii Technologies (&quot;Wadii&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to
-          protecting the privacy and security of our users. This Privacy Policy explains how we collect, use, disclose,
-          and safeguard information when you use our banquet management platform, CRM system, website, mobile
+          <strong>
+            {PRODUCT_NAME} is operated by {OPERATOR_NAME}.
+          </strong>
+        </p>
+        <p>
+          {OPERATOR_NAME} (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is committed to protecting the privacy
+          and security of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard
+          information when you use the {PRODUCT_NAME} banquet management platform, CRM system, website, mobile
           applications, and related services.
         </p>
         <p>
@@ -182,7 +186,7 @@ export default function PrivacyPolicyPage() {
         <h2>Contact Us</h2>
         <p>For privacy-related questions or requests, contact:</p>
         <p>
-          <strong>Wadii Technologies</strong>
+          <strong>{OPERATOR_NAME}</strong>
         </p>
         <ul>
           <li>
@@ -199,8 +203,8 @@ export default function PrivacyPolicyPage() {
           </li>
           <li>
             Website:{" "}
-            <a href={BASE_URL} className="text-[#E62E2D] hover:underline">
-              {BASE_URL}
+            <a href={SITE_URL} className="text-[#E62E2D] hover:underline">
+              {SITE_URL}
             </a>
           </li>
         </ul>

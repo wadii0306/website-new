@@ -33,7 +33,7 @@ function getContactErrorMessage(error: unknown): string {
   return "Something went wrong. Please try again later.";
 }
 
-const CONTACT_EMAIL = "managewisesolutions@gmail.com";
+const CONTACT_EMAIL = "managewisessolution@gmail.com";
 
 const QUICK_STATS = [
   { value: "24h", label: "Avg. response" },

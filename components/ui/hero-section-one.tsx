@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { ArrowRight, Play, Star, TrendingUp, Users, Calendar } from 'lucide-react'
 import { HeroHeader } from './header'
+import { OPERATOR_NAME } from '@/lib/brand'
 
 const STATS = [
   { value: '500+', label: 'Venues', icon: <Users className="w-4 h-4" /> },
@@ -52,10 +53,14 @@ export default function HeroSection() {
               {/* Left: copy */}
               <div className="mx-auto lg:mx-0 max-w-xl">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/5 text-white/60 text-xs font-semibold tracking-wide uppercase mb-6 animate-fade-up">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/15 bg-white/5 text-white/60 text-xs font-semibold tracking-wide uppercase mb-3 animate-fade-up">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#E62E2D]" />
                   Banquet management software
                 </div>
+
+                <p className="text-white/40 text-sm mb-6 animate-fade-up">
+                  Powered by <span className="text-white/60 font-medium">{OPERATOR_NAME}</span>
+                </p>
 
                 {/* H1 — keyword-rich for SEO */}
                 <h1
