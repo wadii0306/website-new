@@ -20,10 +20,7 @@ import { contactApi } from "../../services/contact.service";
 function getContactErrorMessage(error: unknown): string {
   if (axios.isAxiosError(error)) {
     if (!error.response) {
-      if (!process.env.NEXT_PUBLIC_API_URL) {
-        return "Contact API is not configured. Add NEXT_PUBLIC_API_URL=https://api.wadii.in/api in Vercel and redeploy.";
-      }
-      return "Could not reach the Wadii API. Ask your team to confirm NEXT_PUBLIC_API_URL is set to https://api.wadii.in/api on Vercel and redeploy.";
+      return "Network error — please check your connection and try again.";
     }
     const data = error.response.data as { message?: string; errors?: string[] } | undefined;
     if (data?.errors?.length) return data.errors.join(" ");

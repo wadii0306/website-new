@@ -1,8 +1,7 @@
 import api from "@/lib/api";
 
-// Contact API functions
+// Posts via same-origin /api/contact proxy (avoids browser CORS to api.wadii.in).
 export const contactApi = {
-  // Create a new contact submission
   createContact: async (contactData: {
     fullName: string;
     banquetName: string;
@@ -12,7 +11,7 @@ export const contactApi = {
     venueType?: string;
     message?: string;
   }) => {
-    const response = await api.post("/website", contactData)
-    return response.data
+    const response = await api.post("/contact", contactData);
+    return response.data;
   },
-}
+};

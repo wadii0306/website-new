@@ -1,15 +1,8 @@
 import axios from "axios"
 
-const baseURL = process.env.NEXT_PUBLIC_API_URL
-
-if (!baseURL && typeof window !== "undefined") {
-  console.error(
-    "NEXT_PUBLIC_API_URL is not set. Contact form and API calls will fail."
-  )
-}
-
+// Same-origin client for /api/* routes (contact form proxy).
 const api = axios.create({
-  baseURL,
+  baseURL: "/api",
   headers: { "Content-Type": "application/json" },
   timeout: 30000,
 })
